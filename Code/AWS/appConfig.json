@@ -11,7 +11,7 @@
         "SAP_AEM_REST_URL": "<your_aem_rest_url>"
     },
     "s3":{
-        "bucketname": "mybucket",
+        "bucketname": "<your_S3_bucket_name>",
         "camera": "CAM-01",
         "location": "CB-FL-001",
         "plant": "1710"

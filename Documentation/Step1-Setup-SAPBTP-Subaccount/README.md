@@ -19,7 +19,7 @@ If you are new to SAP BTP, follow the [Get Ready to Develop on SAP BTP](https://
 Service | Service Plan | Usage Scenario |
 --- | --- | --- |
 |[Authorization and Trust Management Service](https://discovery-center.cloud.sap/serviceCatalog/authorization-and-trust-management-service?region=all&tab=feature) | application | Manage application authorizations and connections to identity providers.|
-|[SAP Build Process Automation Decisions](https://discovery-center.cloud.sap/serviceCatalog/sap-build-process-automation?region=all) | standard | Digitize and automate decision making with SAP Build Process Automation- Decisions capability to increase flexibility and compliance.|
+|[SAP Build Process Automation- Decision capability](https://discovery-center.cloud.sap/serviceCatalog/sap-build-process-automation?region=all) | standard | Digitize and automate decision making with SAP Build Process Automation- Decisions capability to increase flexibility and compliance.|
 [Cloud Foundry Runtime](https://discovery-center.cloud.sap/serviceCatalog/cloud-foundry-runtime?region=all) | MEMORY | Create polyglot applications.The chosen quota defines the available amount of memory in GB.|
 [SAP Connectivity Service](https://discovery-center.cloud.sap/serviceCatalog/connectivity-service?service_plan=lite&region=all&commercialModel=cloud) | lite | Establish connections between cloud applications and on-premise systems.|
 [Destination Service](https://discovery-center.cloud.sap/serviceCatalog/destination?service_plan=lite&region=all&commercialModel=cloud) | lite | Destination service lets you find the destination information required to access a remote service or system from your extension application.|
@@ -66,4 +66,6 @@ If you already have an existing HANA Instance, you can map it to this SAP BTP su
 
 ### 4. Set Up SAP Business Application Studio
 
-Refer [Manage Authorizations and Roles](https://help.sap.com/docs/SAP%20Business%20Application%20Studio/9d1db9835307451daa8c930fbd9ab264/01e69c53003c4b0a8a64310a3f08867d.html) to assign permissions to users.
+1. Refer [Subscribe to SAP Business Application Studio](https://help.sap.com/docs/bas/sap-business-application-studio/subscribe-to-sap-business-application-studio) and subscribe to SAP Business Application Studio.
+
+2. Refer [Manage Authorizations and Roles](https://help.sap.com/docs/SAP%20Business%20Application%20Studio/9d1db9835307451daa8c930fbd9ab264/01e69c53003c4b0a8a64310a3f08867d.html) to assign permissions to users for accessing SAP Business Application Studio.

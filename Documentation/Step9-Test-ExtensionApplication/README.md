@@ -10,11 +10,11 @@ You have completed the end-to-end integration of events to business actions from
 
     ![plot](./images/S3Search.png)
 
-2. Choose your **Amazon S3 Bucket** which was created earlier.  For example : **awssapppe-p4s** 
+2. Choose your **Amazon S3 Bucket** which was created by you earlier.
 
     ![plot](./images/S3Bucket.png)
 
-3. Choose the folder named **1710/** and keep navigating into the folders, the final path would be **awssapppe-p4s/1710/CB-FL-001/CAM-01** as shown in the image below. Choose **Upload**
+3. Choose the folder named **1710/** and keep navigating into the folders, the final path would be **<your_S3_bucket>/1710/CB-FL-001/CAM-01** as shown in the image below. Choose **Upload**
 
     ![plot](./images/S3CAMFolder.png)
 

@@ -1,5 +1,4 @@
-## Create SAP Build Process Automation - Decisions Project
-In this section, you will configure SAP Business Rule project which will be used to determine which business action should be executed for an event. Additionally, based on your scenario you can create decision tables and business rules.
+In this section, you will configure SAP Build Process Automation project where a Decision will be used to determine which business action should be executed for an event. You will also configure a decision table in the decision project.
 
 ### 1. Create SAP Build Process Automation Project
 
@@ -11,13 +10,15 @@ In this section, you will configure SAP Business Rule project which will be used
 
     ![plot](./images/lobby.png)
 
-3. Choose the **Build an Automated Process Tile**, and then choose **Business Process** Tile.
+3. Choose the **Build an Automated Process Tile** 
 
     ![plot](./images/automatedprocess.png)
 
+    Now choose **Business Process** Tile.
+
     ![plot](./images/process.png)
 
-4. Fill the project name as **Events-to-Business-Actions-Framework-xxx** and Choose **Create**
+4. Fill the project name as **Events-to-Business-Actions-Framework** and Choose **Create**
 
     ![plot](./images/createproject.png)
 
@@ -45,7 +46,7 @@ In this section, you will configure SAP Business Rule project which will be used
 
 1. The **Decision** configuration requires the **Input and Ouput parameters** as well as the business **Rule** that maps the incoming event to it's associated business action. To configure the Input/Output parameters we need to create the Custom Data Type with the fields that the incoming event payload contains.
 
- Under the**Artifacts** Tab, Click on **Create** and choose **Data Types**.
+ Navigate to **Overview** Tab. Under the **Artifacts** Tab, Click on **Create** and choose **Data Type**.
 
  ![plot](./images/CreateDataType.png)
 
@@ -55,11 +56,20 @@ In this section, you will configure SAP Business Rule project which will be used
 
     ![plot](./images/eventInfoDT.png)
 
-    **b.**  Click on **New Field** and Enter the following three field details and click on **Save**
+    **b.**  Click on **New Field** and Enter the **Field Details** as listed in the table below and click on **Save**.
+     **Note:** The values are case-sensitive.
+
+  
+    | Name | Type |
+    |---------|-------------|
+    | SourceSystem | String |
+    | DeviceType | String |
+    | DeviceLocation | String |
+
 
     ![plot](./images/eventDTFields.png)
 
-    **c.** Under the**Artifacts** Tab, Click on **Create** and choose **Data Types**.
+    **c.** Under the **Artifacts** Tab, Click on **Create** and choose **Data Types**.
 
     ![plot](./images/actionInfoDT.png)
 
@@ -67,7 +77,11 @@ In this section, you will configure SAP Business Rule project which will be used
 
     ![plot](./images/actionDTname.png)
 
-    **e.** Click on **New Field** and Enter the following three field details and click on **Save**
+    **e.** Click on **New Field** and Enter the **Field Details** as listed in the table below and click on **Save**
+
+    | Name | Type |
+    |---------|-------------|
+    | ActionId | String |
 
     ![plot](./images/actionDTFields.png)
 
@@ -101,14 +115,15 @@ In this section, you will configure SAP Business Rule project which will be used
 
     ![plot](./images/CreateRule5.png)
 
-    **g.** Fill the fields with following values:
-    ```
-        SourceSystem: ='Azure',
-        DeviceType: ='Silo',
-        DeviceLocation: ='Plant A'
+    **g.** Fill the fields with following values: **Note:** Paste the values along with **equals-to** operator. 
 
-        ActionId to be filled later.
-    ```
+    | SourceSystem | DeviceType |DeviceLocation | ActionId |
+    |---------|-------------|---------|-------------|
+    | = 'AWS-PPE'  | = 'Camera'  |= 'L001'  |  |
+
+
+    Leave the **ActionId** field empty as it is to be filled later.
+
     ![plot](./images/RuleField.png)
 
 5. To use the decision in our CAP extension application we need to deploy the Decision created. 

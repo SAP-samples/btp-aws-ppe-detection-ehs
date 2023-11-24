@@ -2,38 +2,68 @@
 
 In this section, you will define business action in the action-management extension application in SAP BTP. Ensure your application's **Requested State** is **Started**.
 
-### 1. Create Destinations
+### 1. Create Build Process Automation Instance
 
-1. In the SAP BTP cockpit, navigate to your subaccount and choose **Instances and Subscriptions** and then choose **Instances**.
+1. In the SAP BTP cockpit, navigate to your subaccount and choose **Instances and Subscriptions** and then choose **Create** to create a instance of **SAP Build Process Automation**.
 
-    ![plot](./images/postdeploy.png)
+    ![plot](./images/CreateInstance1.png) 
 
-2. Choose **action-management-rules** and then choose the three dots next to **action-management-rules-key** and then choose **View** to open the service key.
+2. Choose the **Service** as  **SAP Build Process Automation**, **Plan** as **standard- Instance** as shown below.
 
-    ![plot](./images/rules-servicekey.png)
 
-3. Copy the values of **clientid**, **clientsecret**, **url** and **rule_runtime_url**.
+    ![plot](./images/CreateInstance2.png)
+
+3. Fill the **Instance Name** as **BPA_Decision** , and Click **Create** button.
+
+
+    ![plot](./images/CreateInstance3.png)
+
+4. In a couple of seconds the instance will be created. **Click** on the instance as shown below.
+
+    ![plot](./images/CreateInstance4.png)
+
+5. Under **Service Keys**, Click on **Create** button, to create a service key for the SAP Build Process Automation instance created.
+
+
+    ![plot](./images/CreateInstance5.png)
+
+6. Fill the **Service Key Name** as **default** and then click on **Create** button.
+
+
+    ![plot](./images/CreateInstance6.png)
+
+7. You will see that the service key is now created.
+
+    ![plot](./images/CreateInstance7.png)
+
+8. Now click on the three dots and choose **View** to view the service key details.
+
+    ![plot](./images/CreateInstance8.png)
+
+9. Click on **Form** Tab to get the structured display of values as shown below. Copy the values of **api**, **clientid**, **clientsecret**, **url** as you will use them while configuring the destination for SAP Build Process Automation.
 
     ![plot](./images/rulekeydetails.png)
 
-4. In the SAP BTP cockpit, navigate to your subaccount and choose **Connectivity > Destinations**.
+### 2. Create Destinations
+
+1. In the SAP BTP cockpit, navigate to your subaccount and choose **Connectivity > Destinations**. Click on **New Destination**
 
     ![plot](./images/BTPCockpitDestinations.png)
 
-5. Create a new destination with the name **ACTION_BUSINESS_RULES** and enter the following configuration values. This is used for calling SAP Business Rules.
+5. Create a new destination with the name **ACTION_DECISIONS** and enter the following configuration values. This is used for calling SAP Build Process Automation Decision capability.
 
-    - Copy the values of rule_runtime_url, clientid, clientsecret and url from Step 2 and update it for URL, Client ID, Client Secret and Token Service URL.
+    - Paste the values of `api`, `clientid`, `clientsecret` and `url` which you have copied from previous step and update it for `URL`, `Client ID`, `Client Secret` and `Token Service URL` respectively as instructed below.
 
     ```
-    Name: ACTION_BUSINESS_RULES
+    Name: ACTION_DECISIONS
     Type: HTTP
-    URL: <rule_runtime_url>/rules-service/rest/v2
+    URL: `api`/public/rule/runtime/rest
     Proxy: Internet
     Authentication: OAuth2ClientCredentials
-    Client ID: <clientid>
-    Client Secret: <clientsercret>
+    Client ID: `clientid`
+    Client Secret: `clientsercret``
     Token Service URL Type: Dedicated
-    Token Service URL: <url>/oauth/token
+    Token Service URL: `url`/oauth/token
 
     Additional Properties:
     HTML5.DynamicDestination: true
@@ -45,7 +75,7 @@ In this section, you will define business action in the action-management extens
 
 6. Create destination with the name **ACTION_MODELER_S4** and enter the following configuration values.
 
-    Change host name in URL, User, Password as per your SAP S/4HANA system details.
+    Change host name in `URL`, `User`, `Password` as per your SAP S/4HANA system details.
 
     - In case of SAP S/4HANA system on AWS Private Cloud, choose **Proxy Type** as **PrivateLink** and the private link **hostname** copied from [Step3b-Setup-SAPPrivateLinkService](../Step3b-Setup-SAPPrivateLinkService/README.md) in the **hostname** field.
 
@@ -90,7 +120,7 @@ In this section, you will define business action in the action-management extens
 
         ![plot](./images/S4HANAOnPremiseDestination.png)
 
-### 2. Configure Business Actions in  Manage Actions application
+### 3. Configure Business Actions in  Manage Actions application
 
 In this section, you will configure the different business actions that needs to be executed based on the event received.
 

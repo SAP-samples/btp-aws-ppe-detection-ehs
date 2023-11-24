@@ -132,9 +132,11 @@ In this section, you will configure the different business actions that needs to
 
     ![plot](./images/ActionManagementHome.png)
 
-3. Choose **Create** to create default action entry.
+3. Choose **Create** button to create default action entry.
 
     ![plot](./images/createaction.png)
+
+    You will see the follwoing screen.
 
     ![plot](./images/createaction1.png)
 
@@ -149,14 +151,16 @@ In this section, you will configure the different business actions that needs to
 
 5. In the **HTTP Information** section, enter the following configuration values.
 
-    **Note**: Replace **Rule Service ID** with the value copied from Create Business Rules Project section of the **Step6-Configure-BusinessRules-Part1** page.
+    **Note**: Replace **DecisionId** with the value copied from Create Decisions Project section of the [Step6-Configure-Decisions-Part1](../Step6-Configure-Decisions-Part1/README.md).
 
     ```
-    Destination: ACTION_BUSINESS_RULES
+    Destination: ACTION_Decisions
     Content-Type: application/json
     Method: POST
-    Relative Path: /workingset-rule-services
-    Payload: { "RuleServiceId": "<RulesServiceID>","Vocabulary": [ { "EventInfo":{ "BUCKETId":"${{event.data.BUCKETId}}", "photo":"${{event.data.photo}}", "SourceSystem": "${{event.data.SourceSystem}}","DeviceLocation": "${{event.data.DeviceLocation}}","DeviceType": "${{event.data.DeviceType}}" } } ] }
+    Relative Path: /v2/rule-services
+    Payload: { "RuleServiceId": "<DecisionId>","Vocabulary": [ { "EventInfo":{ "SourceSystem": "${{event.data.SourceSystem}}","DeviceLocation": "${{event.data.DeviceLocation}}","DeviceType": "${{event.data.DeviceType}}" } } ] }
+
+
     Action Id Path in Response: Result[0].ActionInfo.ActionId
     ```
 
@@ -164,9 +168,13 @@ In this section, you will configure the different business actions that needs to
 
     ![plot](./images/NewBusinessRulesAction.png)
 
-6. Choose **Create**.
+6. Click **Create** button.
 
-7. Create another business action with name **Create EHS Incident** and enter the following  configuration values.
+7. Navigate back to **Manage Actions** and Click on **Create** button. 
+
+    ![plot](./images/ActionManagementHome.png)
+
+8. Fill the **Action Name** as **Create EHS Incident** and enter the following  configuration values.
 
 ```
     Basic Information:
@@ -197,3 +205,5 @@ In this section, you will configure the different business actions that needs to
 Your configuration should look like this:
 
 ![plot](./images/CreateEHSIncidentAction.png)
+
+You have sucessfully configured the Business Action that needs to be executed whenever a event is recieved by the Events-to-Business Actions framework.

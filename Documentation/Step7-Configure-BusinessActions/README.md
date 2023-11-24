@@ -207,3 +207,26 @@ Your configuration should look like this:
 ![plot](./images/CreateEHSIncidentAction.png)
 
 You have sucessfully configured the Business Action that needs to be executed whenever a event is recieved by the Events-to-Business Actions framework.
+
+9. Now Navigate back to **Manage Actions**. Click on the **Settings** Icon as shown below.
+
+![plot](./images/getId1.png)
+
+10. Unselect the **Action Name** as shown below.
+
+![plot](./images/getId2.png)
+
+11. Select the **ID** column and also on the move-to-top icon, as shown below.
+
+![plot](./images/getId3.png)
+
+12. You should see the below screen after making the above changes. Now click on **OK** button.
+
+![plot](./images/getId4.png)
+
+13. You will be able to see the action and it's action Id. Copy the **ActionId** of the main action **Create EHS Incident**, this wil be used to update the **ActionId** in the decision table of the Decision Project in the next step. 
+
+![plot](./images/getId5.png)
+
+
+

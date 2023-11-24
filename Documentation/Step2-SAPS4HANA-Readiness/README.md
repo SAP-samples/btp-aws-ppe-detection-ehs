@@ -35,13 +35,29 @@ Creating a **EHS Incident Safety Observation**  requires two roles
 
 Make sure to add these roles. To add these roles, in your SAP S/4HANA GUI system, 
 
-1. Open the **/n/su01** transaction in SAP S/4HANA.
+1. Type **/nsu01** transaction in SAP S/4HANA and hit enter to open the **User Maintenance: Initial Screen**.
 
-2. Find the SAP S/4HANA user you want to add the roles to and Press Enter.
+    ![plot](./images/su01.png)
 
-3. Click the **Roles** Tab and Choose the **Edit** Option.
+2. Find the SAP S/4HANA user you want to add the roles to and Press Enter. Then **Click** on the **Change** button as shown below.
 
-4. Add the above two roles and **Save** the changes
+    ![plot](./images/su2.png)
+
+3. You will see the **Maintain Users** Screen, Click the **Roles** Tab.
+
+    ![plot](./images/s3.png)
+
+4. Add the first role, `SAP_BR_INDUSTRIAL_HYGIENIST` and hit enter.
+
+    ![plot](./images/s4.png)
+
+5. Add the second role, `SAP_EHSM_HSS_INCIDENT_MANAGER` and hit enter.
+
+    ![plot](./images/s5.png)
+
+6. Confirm both the roles are added and listed as shown be;low. Then click on **Save** button to save the role addition to the user.
+
+    ![plot](./images/s6.png)
 
 
 Based on your business scenario, expose the respective APIs (For example, Record Safety Observation, Report Incident etc.).

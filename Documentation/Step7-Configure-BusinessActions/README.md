@@ -1,6 +1,6 @@
 ## Configure SAP S/4HANA Business Actions in the Extension Application
 
-In this section, you will define business action in the action-management extension application in SAP BTP. Ensure your application's **Requested State** is **Started**.
+In this section, you will define business action in the action-management extension application in SAP BTP.
 
 ### 1. Create Build Process Automation Instance
 
@@ -154,7 +154,7 @@ In this section, you will configure the different business actions that needs to
     **Note**: Replace **DecisionId** with the value copied from Create Decisions Project section of the [Step6-Configure-Decisions-Part1](../Step6-Configure-Decisions-Part1/README.md).
 
     ```
-    Destination: ACTION_Decisions
+    Destination: ACTION_DECISIONS
     Content-Type: application/json
     Method: POST
     Relative Path: /v2/rule-services
@@ -172,9 +172,9 @@ In this section, you will configure the different business actions that needs to
 
 7. Navigate back to **Manage Actions** and Click on **Create** button. 
 
-    ![plot](./images/ActionManagementHome.png)
+    ![plot](./images/createaction.png)
 
-8. Fill the **Action Name** as **Create EHS Incident** and enter the following  configuration values.
+8. Fill the **Action Name** as **Create EHS Incident** and enter the following  configuration values, and then click on **Create** button.
 
 ```
     Basic Information:

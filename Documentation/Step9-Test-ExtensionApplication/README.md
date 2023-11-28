@@ -20,7 +20,7 @@ You have completed the end-to-end integration of events to business actions from
 
     ![plot](./images/S3CAMFolder.png)
 
-5. Click on **Add files** button, choose the [Missing-Gloves.jpg](Missing-gloves.jpg) downloaded in the previous step. Click on **Upload** button.
+5. Click on **Add files** button, choose the [Missing-gloves.jpg](Missing-gloves.jpg) downloaded in the previous step. Click on **Upload** button.
     
     ![plot](./images/S3Upload.png)
 

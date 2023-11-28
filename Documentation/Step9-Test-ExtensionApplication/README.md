@@ -14,7 +14,7 @@ You have completed the end-to-end integration of events to business actions from
 
     ![plot](./images/S3Bucket.png)
 
-3. Choose the folder named **1710/** and keep navigating into the folders, the final path would be **<your_S3_bucket>/1710/CB-FL-001/CAM-01** as shown in the image below. Download the [Missing-Gloves.jpg](Missing-Gloves.jpg). The image captures a group pf people working on site but have missing hand gloves, which in our case indicates a missing Personal Protective Equipment. Hence, this file is used as the sample event for testing the scenario.
+3. Choose the folder named **1710/** and keep navigating into the folders, the final path would be **<your_S3_bucket>/1710/CB-FL-001/CAM-01** as shown in the image below. Download the [Missing-gloves.jpg](Missing-gloves.jpg). The image captures a group pf people working on site but have missing hand gloves, which in our case indicates a missing Personal Protective Equipment. Hence, this file is used as the sample event for testing the scenario.
     
     In the **CAM-01** folder, Choose **Upload**
 

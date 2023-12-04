@@ -196,7 +196,7 @@ In this section, you will configure the different business actions that needs to
         "IncidentCategory": "${{event.data.eventData.IncidentCategory}}",
         "IncidentTitle": "${{event.data.eventData.IncidentTitle}}",
         "IncidentUTCDateTime": "${{event.data.eventData.IncidentUTCDateTime}}",
-        "IncidentDescriptionOfEvents":"Check s3 bucket "${{event.data.BUCKETId}}" and filename for incident image"
+        "IncidentDescriptionOfEvents":"Check s3 bucket ${{event.data.BUCKETId}} and filename for incident image"
     }
     Is Csrf Token Needed?: true
 

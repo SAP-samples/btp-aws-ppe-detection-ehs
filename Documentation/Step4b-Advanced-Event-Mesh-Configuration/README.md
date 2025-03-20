@@ -73,7 +73,7 @@
 
      ![plot](./images/aem-rest-client.png)
 
-     Click on ** + REST Delivery Point** and Fill the **RDP Name** as **rdp1**
+     Click on **+ REST Delivery Point** and Fill the **RDP Name** as **rdp1**
 
      ![plot](./images/aem-rdp-name.png)
 

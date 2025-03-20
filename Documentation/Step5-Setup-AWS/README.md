@@ -127,7 +127,7 @@ The following are the two SAP Environment variables:
  
    ![plot](./images/aem-rest-url-2.png)
  
-So, the **SAP_AEM_REST_URL** is `Secured_REST_Host`/monitron/messages
+So, the **SAP_AEM_REST_URL** is `Secured_REST_Host`/ppe/messages
 
 
 So your `appConfig.json` file looks as shown below: Fill all the details by following the steps mentioned above. 
